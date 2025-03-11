@@ -73,87 +73,87 @@
 
 // 2. WAP for Given Link List is Palindrome or not
 
-class ListNode {
-    constructor(val) {
-        this.val = val;
-        this.next = null;
-    }
-}
+// class ListNode {
+//     constructor(val) {
+//         this.val = val;
+//         this.next = null;
+//     }
+// }
 
-class LinkedList {
-    constructor() {
-        this.head = null;
-    }
+// class LinkedList {
+//     constructor() {
+//         this.head = null;
+//     }
 
-    append(val) {
-        let newNode = new ListNode(val);
-        if (!this.head) {
-            this.head = newNode;
-            return;
-        }
-        let temp = this.head;
-        while (temp.next) {
-            temp = temp.next;
-        }
-        temp.next = newNode;
-    }
+//     append(val) {
+//         let newNode = new ListNode(val);
+//         if (!this.head) {
+//             this.head = newNode;
+//             return;
+//         }
+//         let temp = this.head;
+//         while (temp.next) {
+//             temp = temp.next;
+//         }
+//         temp.next = newNode;
+//     }
 
-    display() {
-        let temp = this.head;
-        let output = [];
-        while (temp) {
-            output.push(temp.val);
-            temp = temp.next;
-        }
-        console.log("Linked List:", output.join(" -> "));
-    }
+//     display() {
+//         let temp = this.head;
+//         let output = [];
+//         while (temp) {
+//             output.push(temp.val);
+//             temp = temp.next;
+//         }
+//         console.log("Linked List:", output.join(" -> "));
+//     }
 
-    isPalindrome() {
-        if (!this.head || !this.head.next) 
-            return true;
+//     isPalindrome() {
+//         if (!this.head || !this.head.next) 
+//             return true;
 
-        let slow = this.head, fast = this.head;
+//         let slow = this.head, fast = this.head;
 
-        while (fast && fast.next) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
+//         while (fast && fast.next) {
+//             slow = slow.next;
+//             fast = fast.next.next;
+//         }
 
-        let prev = null, curr = slow;
-        while (curr) {
-            let nextTemp = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = nextTemp;
-        }
+//         let prev = null, curr = slow;
+//         while (curr) {
+//             let nextTemp = curr.next;
+//             curr.next = prev;
+//             prev = curr;
+//             curr = nextTemp;
+//         }
 
-        let first = this.head, second = prev;
-        while (second) {
-            if (first.val !== second.val) return false;
-            first = first.next;
-            second = second.next;
-        }
+//         let first = this.head, second = prev;
+//         while (second) {
+//             if (first.val !== second.val) return false;
+//             first = first.next;
+//             second = second.next;
+//         }
 
-        return true;
-    }
-}
+//         return true;
+//     }
+// }
 
-let obj = new LinkedList();
-obj.append(1);
-obj.append(2);
-obj.append(2);
-obj.append(1);
+// let obj = new LinkedList();
+// obj.append(1);
+// obj.append(2);
+// obj.append(2);
+// obj.append(1);
 
-obj.display();  
-console.log("Is Palindrome:", obj.isPalindrome());  
+// obj.display();  
+// console.log("Is Palindrome:", obj.isPalindrome());  
 
 // Output: true
 
-obj = new LinkedList();
-obj.append(1);
-obj.append(2);
-obj.display();  
-console.log("Is Palindrome:", obj.isPalindrome());  
+// obj = new LinkedList();
+// obj.append(1);
+// obj.append(2);
+// obj.display();  
+// console.log("Is Palindrome:", obj.isPalindrome());  
 
 // Output: false
 
@@ -187,7 +187,7 @@ console.log("Is Palindrome:", obj.isPalindrome());
 //         temp.next = newNode;
 //     }
 
-//     removeAt(position) {
+//     remove(position) {
 //         if (!this.head || position < 0) {
 //             console.log("Invalid position or empty list");
 //             return;
@@ -233,15 +233,15 @@ console.log("Is Palindrome:", obj.isPalindrome());
 // obj.append(40);
 // obj.append(50);
 
-// console.log("Original List:");
+// console.log("Original List : ");
 // obj.display();
 
-// obj.removeAt(2);
-// console.log("After Removing Node at Position 2:");
+// obj.remove(2);
+// console.log("After Removing Node at Position 2 : ");
 // obj.display();
 
-// obj.removeAt(0);
-// console.log("After Removing Head Node:");
+// obj.remove(0);
+// console.log("After Removing Head Node : ");
 // obj.display();
 
 // output : 
