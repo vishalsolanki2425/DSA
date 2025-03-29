@@ -100,19 +100,19 @@
 
 class Stack {
     constructor() {
-        this.stack = [];
+        this.data = [];
     }
 
     push(element) {
-        this.stack.push(element);
+        this.data.push(element);
     }
 
     pop() {
-        return this.stack.pop();
+        return this.data.pop();
     }
 
     isEmpty() {
-        return this.stack.length === 0;
+        return this.data.length === 0;
     }
 }
 
