@@ -98,44 +98,44 @@
 
 // 3. Write a program for a reverse string using Stack.
 
-class Stack {
-    constructor() {
-        this.data = [];
-    }
+// class Stack {
+//     constructor() {
+//         this.data = [];
+//     }
 
-    push(element) {
-        this.data.push(element);
-    }
+//     push(element) {
+//         this.data.push(element);
+//     }
 
-    pop() {
-        return this.data.pop();
-    }
+//     pop() {
+//         return this.data.pop();
+//     }
 
-    isEmpty() {
-        return this.data.length === 0;
-    }
-}
+//     isEmpty() {
+//         return this.data.length === 0;
+//     }
+// }
 
-function reverseString(inputString) {
-    let stack = new Stack();
+// function reverseString(inputString) {
+//     let stack = new Stack();
 
-    for (let char of inputString) {
-        stack.push(char);
-    }
+//     for (let char of inputString) {
+//         stack.push(char);
+//     }
 
-    let reversedString = "";
+//     let reversedString = "";
 
-    while (!stack.isEmpty()) {
-        reversedString += stack.pop();
-    }
+//     while (!stack.isEmpty()) {
+//         reversedString += stack.pop();
+//     }
 
-    return reversedString;
-}
+//     return reversedString;
+// }
 
-let originalString = "Hello";
-let reversed = reverseString(originalString);
-console.log("Original String:", originalString);
-console.log("Reversed String:", reversed);
+// let originalString = "Hello";
+// let reversed = reverseString(originalString);
+// console.log("Original String:", originalString);
+// console.log("Reversed String:", reversed);
 
 
 // output: Original String: Hello
