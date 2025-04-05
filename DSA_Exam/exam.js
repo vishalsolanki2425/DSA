@@ -69,9 +69,8 @@
 //       }
 //     }
   
-//     return [...quickSort(left), pivot, ...quickSort(right)];
 //   }
-  
+    
 //   let unsortedArr = [7, 2, 1, 6, 8, 5, 3, 4];
 //   console.log("Unsorted Array:", unsortedArr);
   
@@ -79,8 +78,6 @@
 //   console.log("Sorted Array:", sortedArr);
 
 // output : 
-// Unsorted Array: [7, 2, 1, 6, 8, 5, 3, 4]
-// Sorted Array: [1, 2, 3, 4, 5, 6, 7, 8]
 
 /* =================================================================================== */
 
