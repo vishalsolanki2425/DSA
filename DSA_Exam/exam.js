@@ -110,18 +110,15 @@ class Queue {
 
     isEmpty() {
         if (this.arr.length === 0) {
-            return 'this is empty'
+            return console.log('this is empty');
         }
-        else{
-            return 'this is not empty'
+        else {
+            return console.log('this is not empty');
         }
     }
 
-    peek() {
-        if (this.isEmpty()) {
-            return 'Queue is empty';
-        }
-        return this.arr[0];
+    peak() {
+        return this.arr.length = [0];
     }
 
     display() {
@@ -141,6 +138,11 @@ q.remove();
 q.display();
 q.isEmpty();
 q.display();
+q.peak();
+q.display();
 
-
+// output : 10,20,30,40,50
+//          20,30,40,50
+//          this is not empty [20,30,40,50]
+// 
 /* =================================================================================== */

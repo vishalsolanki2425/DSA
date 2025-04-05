@@ -4,8 +4,8 @@ class node{
         this.next = null;
     }
     class (single) {
-        constructor(data) {
+        constructor(data) 
             this.data = data;
-        }
+        
     }
 }
