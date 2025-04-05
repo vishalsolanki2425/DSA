@@ -52,39 +52,35 @@
 
 // Q.3 WAP to implements Quick Sort using JavaScript.
 
-function quickSort(arr, left = 0, right = arr.length - 1) {
-    if (left < right) {
+// function quickSort(arr) {
+//     if (arr.length <= 1){
+//         return arr;
+//     }
+  
+//     let pivot = arr[arr.length - 1];
+//     let left = [];
+//     let right = [];
+  
+//     for (let i = 0; i < arr.length - 1; i++) {
+//       if (arr[i] < pivot) {
+//         left.push(arr[i]);
+//       } else {
+//         right.push(arr[i]);
+//       }
+//     }
+  
+//     return [...quickSort(left), pivot, ...quickSort(right)];
+//   }
+  
+//   let unsortedArr = [7, 2, 1, 6, 8, 5, 3, 4];
+//   console.log("Unsorted Array:", unsortedArr);
+  
+//   let sortedArr = quickSort(unsortedArr);
+//   console.log("Sorted Array:", sortedArr);
 
-        let pivotIndex = partition(arr, left, right);
-
-        quickSort(arr, left, pivotIndex - 1);
-        quickSort(arr, pivotIndex + 1, right);
-    }
-    return arr;
-}
-
-function partition(arr, left, right) {
-
-    let pivot = arr[right];
-    let i = left - 1;
-
-    for (let j = left; j < right; j++) {
-        if (arr[j] <= pivot) {
-            i++;
-            [arr[i], arr[j]] = [arr[j], arr[i]];
-        }
-    }
-
-    [arr[i + 1], arr[right]] = [arr[right], arr[i + 1]];
-    return i + 1;
-}
-
-let unsortedArray = [7, 2, 1, 6, 8, 5, 3, 4];
-console.log("Unsorted Array:", unsortedArray);
-
-let sortedArray = quickSort([...unsortedArray]);
-console.log("Sorted Array:", sortedArray);
-
+// output : 
+// Unsorted Array: [7, 2, 1, 6, 8, 5, 3, 4]
+// Sorted Array: [1, 2, 3, 4, 5, 6, 7, 8]
 
 /* =================================================================================== */
 
